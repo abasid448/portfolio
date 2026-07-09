@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<!--
+  Abdul Basid — Branded HTML email template
+  ------------------------------------------------------------------
+  HOW TO USE
+  1. Host your logo somewhere with a PUBLIC absolute URL, e.g. push it to
+     your site so it lives at:  https://abasid448.github.io/assets/img/ab-logo.png
+     (a copy is referenced from ../assets/img/ab-logo.png in this repo).
+  2. Find/replace  LOGO_URL  below with that absolute URL.
+  3. Edit the text between the  <!-- EDIT --~~>  markers for each send.
+  4. Test at https://www.mail-tester.com or send yourself a copy first.
+
+  NOTES
+  - Table-based + inline CSS = works in Gmail, Apple Mail, Outlook, etc.
+  - Images are blocked by default in most clients, so the "ABDUL BASID"
+    wordmark and footer are real HTML/CSS text — always visible.
+  - Web fonts don't work in email; this uses web-safe Arial/Georgia stacks.
+-->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="supported-color-schemes" content="dark light" />
+  <title>Abdul Basid</title>
+  <!--[if mso]>
+  <style type="text/css">
+    body, table, td, a { font-family: Arial, sans-serif !important; }
+  </style>
+  <![endif]-->
+  <style type="text/css">
+    /* Client resets */
+    body { margin: 0; padding: 0; width: 100% !important; background: #050505; }
+    table { border-collapse: collapse; }
+    img { border: 0; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; display: block; }
+    a { text-decoration: none; }
+    .wordmark-a { color: #c9a24b; }
+    .wordmark-b { color: #b9bdc6; }
+    /* Mobile */
+    @media only screen and (max-width: 620px) {
+      .container { width: 100% !important; }
+      .px { padding-left: 26px !important; padding-right: 26px !important; }
+      .h1 { font-size: 26px !important; letter-spacing: 1px !important; }
+      .wordmark { font-size: 22px !important; letter-spacing: 6px !important; }
+      .stack { display: block !important; width: 100% !important; text-align: center !important; }
+    }
+  </style>
+</head>
+
+<body style="margin:0; padding:0; background:#050505;">
+
+  <!-- Preheader (hidden preview text in the inbox list) -->
+  <div style="display:none; max-height:0; overflow:hidden; opacity:0; color:#050505; font-size:1px; line-height:1px;">
+    Building production apps with Kotlin &amp; Jetpack Compose — let's talk.
+  </div>
+
+  <!-- Full-width backdrop -->
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#050505" style="background:#050505;">
+    <tr>
+      <td align="center" style="padding:34px 14px;">
+
+        <!-- 600px card -->
+        <table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" class="container"
+          style="width:600px; max-width:600px; background:#0b0b0c; border:1px solid #1c1c1f; border-radius:16px; overflow:hidden;">
+
+          <!-- ===== HEADER / LOGO ===== -->
+          <tr>
+            <td align="center" bgcolor="#080808" style="background:#080808; padding:38px 30px 26px;">
+              <!-- Logo image (shows when images are enabled) -->
+              <img src="../assets/img/ab-logo.png" width="132" height="132" alt="Abdul Basid"
+                style="width:132px; height:132px; margin:0 auto 6px; border-radius:12px;" />
+              <!-- Always-visible text wordmark -->
+              <div class="wordmark" style="font-family:Arial,Helvetica,sans-serif; font-size:26px; letter-spacing:9px; font-weight:600; padding-top:6px;">
+                <span class="wordmark-a">ABDUL</span>&nbsp;<span class="wordmark-b">BASID</span>
+              </div>
+              <div style="font-family:Arial,Helvetica,sans-serif; font-size:11px; letter-spacing:4px; color:#7c7c82; text-transform:uppercase; padding-top:10px;">
+                Android Developer
+              </div>
+              <!-- gold hairline divider -->
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin:20px auto 0;">
+                <tr>
+                  <td width="46" height="1" style="background:#3a3117; font-size:0; line-height:0;">&nbsp;</td>
+                  <td style="font-family:Arial,sans-serif; font-size:10px; color:#c9a24b; letter-spacing:2px; padding:0 10px;">AB</td>
+                  <td width="46" height="1" style="background:#3a3117; font-size:0; line-height:0;">&nbsp;</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- ===== BODY ===== -->
+          <tr>
+            <td class="px" style="padding:36px 44px 8px;">
+
+              <!-- EDIT: headline -->
+              <h1 class="h1" style="margin:0 0 18px; font-family:Georgia,'Times New Roman',serif; font-size:30px; line-height:1.25; font-weight:normal; color:#f2f2f4; letter-spacing:0.5px;">
+                Let's build something<br /><span style="color:#c9a24b;">worth shipping.</span>
+              </h1>
+
+              <!-- EDIT: body copy -->
+              <p style="margin:0 0 18px; font-family:Arial,Helvetica,sans-serif; font-size:15px; line-height:1.7; color:#b6b6bc;">
+                Hi there,
+              </p>
+              <p style="margin:0 0 18px; font-family:Arial,Helvetica,sans-serif; font-size:15px; line-height:1.7; color:#b6b6bc;">
+                I'm Abdul Basid, an Android developer building production mobile apps with
+                <strong style="color:#e8e8ea;">Kotlin</strong> and
+                <strong style="color:#e8e8ea;">Jetpack Compose</strong> — and shipping across
+                React/Next.js web consoles and a Node.js GraphQL backend. If you have a role,
+                a project, or an idea you want brought to life, I'd love to talk.
+              </p>
+              <p style="margin:0 0 30px; font-family:Arial,Helvetica,sans-serif; font-size:15px; line-height:1.7; color:#b6b6bc;">
+                Take a look at my recent work and get in touch below.
+              </p>
+
+              <!-- EDIT: CTA button (bulletproof) -->
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin:0 0 34px;">
+                <tr>
+                  <td align="center" bgcolor="#c9a24b" style="background:#c9a24b; border-radius:6px;">
+                    <a href="https://abasid448.github.io" target="_blank"
+                      style="display:inline-block; padding:14px 30px; font-family:Arial,Helvetica,sans-serif; font-size:14px; font-weight:bold; letter-spacing:1px; color:#0a0a0a; border-radius:6px;">
+                      VIEW MY PORTFOLIO&nbsp;&nbsp;&rarr;
+                    </a>
+                  </td>
+                </tr>
+              </table>
+
+            </td>
+          </tr>
+
+          <!-- divider -->
+          <tr>
+            <td style="padding:0 44px;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr><td height="1" style="background:#1c1c1f; font-size:0; line-height:0;">&nbsp;</td></tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- ===== FOOTER / SIGNATURE ===== -->
+          <tr>
+            <td class="px" style="padding:28px 44px 34px;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <!-- Monogram cell -->
+                  <td class="stack" width="66" valign="top" style="padding-right:16px;">
+                    <div style="width:56px; height:56px; border:1px solid #2a2a2e; border-radius:10px; text-align:center;">
+                      <div style="font-family:Georgia,serif; font-size:24px; letter-spacing:1px; line-height:56px;">
+                        <span class="wordmark-a">A</span><span class="wordmark-b">B</span>
+                      </div>
+                    </div>
+                  </td>
+                  <!-- Details cell -->
+                  <td class="stack" valign="top">
+                    <div style="font-family:Arial,Helvetica,sans-serif; font-size:16px; font-weight:bold; color:#e8e8ea; letter-spacing:0.5px;">
+                      Abdul Basid
+                    </div>
+                    <div style="font-family:Arial,Helvetica,sans-serif; font-size:12px; color:#8a8f99; letter-spacing:1px; padding:3px 0 12px; text-transform:uppercase;">
+                      Android Developer
+                    </div>
+                    <div style="font-family:Arial,Helvetica,sans-serif; font-size:13px; line-height:1.9; color:#b6b6bc;">
+                      <a href="mailto:theabdulbasid@gmail.com" style="color:#c9a24b;">theabdulbasid@gmail.com</a><br />
+                      <a href="tel:+917306878565" style="color:#b6b6bc;">+91 73068 78565</a>&nbsp;&nbsp;·&nbsp;&nbsp;Kottayam, Kerala, India
+                    </div>
+                    <!-- Social links -->
+                    <div style="font-family:Arial,Helvetica,sans-serif; font-size:12px; letter-spacing:1px; padding-top:14px;">
+                      <a href="https://abasid448.github.io" style="color:#8a8f99;">PORTFOLIO</a>
+                      <span style="color:#3a3a3e;">&nbsp;&nbsp;/&nbsp;&nbsp;</span>
+                      <a href="https://www.linkedin.com/in/abdul-bazzi" style="color:#8a8f99;">LINKEDIN</a>
+                      <span style="color:#3a3a3e;">&nbsp;&nbsp;/&nbsp;&nbsp;</span>
+                      <a href="https://github.com/abasid448" style="color:#8a8f99;">GITHUB</a>
+                      <span style="color:#3a3a3e;">&nbsp;&nbsp;/&nbsp;&nbsp;</span>
+                      <a href="https://www.instagram.com/abdul_bazzi/" style="color:#8a8f99;">INSTAGRAM</a>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+        </table>
+
+        <!-- Sub-footer -->
+        <table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" class="container" style="width:600px; max-width:600px;">
+          <tr>
+            <td align="center" style="padding:20px 30px 6px; font-family:Arial,Helvetica,sans-serif; font-size:11px; line-height:1.7; color:#5a5a60;">
+              You're receiving this because you connected with Abdul Basid.<br />
+              &copy; 2026 Abdul Basid &nbsp;·&nbsp; <a href="#" style="color:#7c7c82;">Unsubscribe</a>
+            </td>
+          </tr>
+        </table>
+
+      </td>
+    </tr>
+  </table>
+
+</body>
+
+</html>

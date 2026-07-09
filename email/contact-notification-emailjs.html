@@ -1,0 +1,80 @@
+<!--
+  EmailJS template — "New contact from the portfolio"
+  ---------------------------------------------------
+  Paste the markup below into your EmailJS template's HTML editor
+  (Email Templates → your template → Content → "< >" code view).
+
+  Variables used (must match the params sent from main.js):
+    {{name}}     {{email}}     {{message}}
+
+  In the EmailJS template settings also set:
+    To      : theabdulbasid@gmail.com
+    Reply-To: {{email}}      (so you can reply straight to the sender)
+    Subject : New enquiry from {{name}} — Portfolio
+-->
+<div style="font-family: 'Segoe UI', system-ui, -apple-system, Arial, sans-serif; font-size: 16px; line-height: 1.6; background-color: #f5f1e9; margin: 0; padding: 0;">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color: #f5f1e9;">
+    <tr>
+      <td align="center" style="padding: 32px 16px;">
+        <table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" style="max-width: 600px; width: 100%; background-color: #ffffff; border-radius: 14px; overflow: hidden; border: 1px solid #ece5d8; box-shadow: 0 10px 30px rgba(20,18,12,0.08);">
+
+          <!-- Gold accent -->
+          <tr><td style="height: 4px; background-color: #c6a15b; line-height: 4px; font-size: 0;">&nbsp;</td></tr>
+
+          <!-- Dark header with logo -->
+          <tr>
+            <td align="center" bgcolor="#0c0c0c" style="background-color: #0c0c0c; padding: 26px 24px;">
+              <img src="https://res.cloudinary.com/f9elij5b/image/upload/f_auto,q_auto/logo_ewvjlk" alt="Abdul Basid" height="54" style="height: 54px; width: auto; display: block; border: 0;" />
+            </td>
+          </tr>
+          <tr><td style="height: 1px; background-color: #e7e1d4; line-height: 1px; font-size: 0;">&nbsp;</td></tr>
+
+          <!-- Body -->
+          <tr>
+            <td style="padding: 34px 40px 10px 40px; color: #2a2a2e;">
+              <h1 style="margin: 0 0 6px 0; font-family: Georgia, 'Times New Roman', serif; font-size: 22px; font-weight: 700; color: #14120c;">
+                New message from your <span style="color: #b4863b;">portfolio</span>
+              </h1>
+              <p style="margin: 0 0 22px 0; color: #6b6b72; font-size: 14px;">Someone just reached out through your website.</p>
+
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border: 1px solid #ece5d8; border-radius: 10px; overflow: hidden;">
+                <tr>
+                  <td style="padding: 14px 18px; background-color: #faf7f1; width: 110px; font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; color: #8a857a; border-bottom: 1px solid #ece5d8;">Name</td>
+                  <td style="padding: 14px 18px; font-weight: 600; color: #14120c; border-bottom: 1px solid #ece5d8;">{{name}}</td>
+                </tr>
+                <tr>
+                  <td style="padding: 14px 18px; background-color: #faf7f1; font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; color: #8a857a; border-bottom: 1px solid #ece5d8;">Email</td>
+                  <td style="padding: 14px 18px; border-bottom: 1px solid #ece5d8;">
+                    <a href="mailto:{{email}}" style="color: #b4863b; text-decoration: none; font-weight: 600;">{{email}}</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 14px 18px; background-color: #faf7f1; font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; color: #8a857a; vertical-align: top;">Message</td>
+                  <td style="padding: 14px 18px; color: #2a2a2e; white-space: pre-wrap;">{{message}}</td>
+                </tr>
+              </table>
+
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin: 26px 0 8px 0;">
+                <tr>
+                  <td align="center" bgcolor="#c6a15b" style="background-color: #c6a15b; border-radius: 6px;">
+                    <a href="mailto:{{email}}" style="display: inline-block; text-decoration: none; color: #14120c; font-weight: 700; font-size: 15px; padding: 12px 28px; border-radius: 6px;">Reply to {{name}}</a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td style="padding: 20px 40px; background-color: #faf7f1; border-top: 1px solid #ece5d8;">
+              <p style="margin: 0; font-size: 12px; line-height: 1.6; color: #8a857a;">
+                Sent automatically from <a href="https://abasid448.github.io" style="color: #8a857a; text-decoration: none;">abasid448.github.io</a> · © Abdul Basid
+              </p>
+            </td>
+          </tr>
+
+        </table>
+      </td>
+    </tr>
+  </table>
+</div>

@@ -1,0 +1,113 @@
+<!--
+  EmailJS AUTO-REPLY template — "Thank you for reaching out"
+  ----------------------------------------------------------
+  This is the gold thank-you email the VISITOR receives after submitting
+  the contact form. Paste the markup below into an EmailJS template's
+  HTML editor (Email Templates -> your template -> Content -> "< >").
+
+  Variables used:  {{name}}   {{message}}
+
+  In the EmailJS template settings set:
+    To Email : {{email}}                 (send it back to the visitor)
+    Reply-To : theabdulbasid@gmail.com   (their reply reaches you)
+    From Name: Abdul Basid
+    Subject  : Thanks for reaching out, {{name}}
+-->
+<div style="font-family: 'Segoe UI', system-ui, -apple-system, Arial, sans-serif; font-size: 16px; line-height: 1.6; background-color: #f5f1e9; margin: 0; padding: 0;">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color: #f5f1e9;">
+    <tr>
+      <td align="center" style="padding: 32px 16px;">
+
+        <!-- Card -->
+        <table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" style="max-width: 600px; width: 100%; background-color: #ffffff; border-radius: 14px; overflow: hidden; border: 1px solid #ece5d8; box-shadow: 0 10px 30px rgba(20,18,12,0.08);">
+
+          <!-- Gold top accent -->
+          <tr>
+            <td style="height: 4px; background-color: #c6a15b; line-height: 4px; font-size: 0;">&nbsp;</td>
+          </tr>
+
+          <!-- Dark header with logo -->
+          <tr>
+            <td align="center" bgcolor="#0c0c0c" style="background-color: #0c0c0c; padding: 30px 24px;">
+              <a href="https://abasid448.github.io" target="_blank" style="text-decoration: none; outline: none;">
+                <img src="https://res.cloudinary.com/f9elij5b/image/upload/f_auto,q_auto/logo_ewvjlk" alt="Abdul Basid" height="64" style="height: 64px; width: auto; display: block; border: 0;" />
+              </a>
+            </td>
+          </tr>
+
+          <!-- Thin silver divider -->
+          <tr>
+            <td style="height: 1px; background-color: #e7e1d4; line-height: 1px; font-size: 0;">&nbsp;</td>
+          </tr>
+
+          <!-- Body -->
+          <tr>
+            <td style="padding: 36px 40px 8px 40px; color: #2a2a2e;">
+              <h1 style="margin: 0 0 18px 0; font-family: Georgia, 'Times New Roman', serif; font-size: 24px; font-weight: 700; color: #14120c; letter-spacing: 0.2px;">
+                Thank you for <span style="color: #b4863b;">reaching out</span>
+              </h1>
+
+              <p style="margin: 0 0 16px 0;">
+                Hi {{name}},
+              </p>
+              <p style="margin: 0 0 16px 0;">
+                Thank you so much for taking the time to connect with me through my portfolio. Your message has landed safely in my inbox, and it genuinely means a lot to me.
+              </p>
+              <p style="margin: 0 0 20px 0;">
+                I read every message personally and I'll get back to you as soon as I can — usually within a day or two.
+              </p>
+
+              <!-- Echo of what they sent -->
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin: 0 0 26px 0; border-left: 3px solid #c6a15b; background-color: #faf7f1; border-radius: 0 8px 8px 0;">
+                <tr>
+                  <td style="padding: 14px 18px;">
+                    <p style="margin: 0 0 4px 0; font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; color: #8a857a;">Your message</p>
+                    <p style="margin: 0; color: #2a2a2e; white-space: pre-wrap;">{{message}}</p>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- Bulletproof gold button -->
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin: 0 0 28px 0;">
+                <tr>
+                  <td align="center" bgcolor="#c6a15b" style="background-color: #c6a15b; border-radius: 6px;">
+                    <a href="https://abasid448.github.io" target="_blank"
+                       style="display: inline-block; text-decoration: none; outline: none; color: #14120c; font-weight: 700; font-size: 15px; letter-spacing: 0.3px; padding: 13px 30px; border-radius: 6px;">
+                      Explore My Work
+                    </a>
+                  </td>
+                </tr>
+              </table>
+
+              <p style="margin: 0 0 24px 0; color: #4a4a4f;">
+                In the meantime, feel free to browse my latest projects or connect with me on
+                <a href="https://www.linkedin.com/in/abdul-bazzi" target="_blank" style="text-decoration: none; outline: none; color: #b4863b; font-weight: 600;">LinkedIn</a>.
+                You can also just reply to this email — I'd love to stay in touch.
+              </p>
+
+              <p style="margin: 0 0 6px 0; color: #2a2a2e;">Warm regards,</p>
+              <p style="margin: 0 0 2px 0; font-weight: 700; color: #14120c;">Abdul Basid</p>
+              <p style="margin: 0 0 8px 0; font-size: 14px; color: #6b6b72;">Android Developer</p>
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td style="padding: 22px 40px; background-color: #faf7f1; border-top: 1px solid #ece5d8;">
+              <p style="margin: 0; font-size: 12px; line-height: 1.6; color: #8a857a;">
+                You're receiving this email because you contacted Abdul Basid via the portfolio website.<br />
+                <a href="https://abasid448.github.io" target="_blank" style="color: #8a857a; text-decoration: none;">abasid448.github.io</a>
+                &nbsp;·&nbsp;
+                <a href="mailto:theabdulbasid@gmail.com" style="color: #8a857a; text-decoration: none;">theabdulbasid@gmail.com</a><br />
+                © Abdul Basid. All rights reserved.
+              </p>
+            </td>
+          </tr>
+
+        </table>
+        <!-- /Card -->
+
+      </td>
+    </tr>
+  </table>
+</div>
