@@ -531,15 +531,60 @@ body.has-cursor .cursor-ring {
 .skill-card h3 { font-family: var(--font-display); font-size: 1.1rem; }
 .chips { display: flex; flex-wrap: wrap; gap: 9px; }
 .chip {
+  position: relative;
   padding: 6px 13px;
   border-radius: 999px;
   font-size: 0.83rem;
   color: var(--muted);
   border: 1px solid var(--border);
   background: rgba(255, 255, 255, 0.02);
-  transition: all 0.2s var(--ease);
+  transition: color 0.2s var(--ease), border-color 0.2s var(--ease), transform 0.2s var(--ease);
 }
 .chip:hover { color: var(--gold-2); border-color: var(--gold); transform: translateY(-2px); }
+
+/* ---------- Chip tooltips (hover descriptions) ---------- */
+.chip[data-tip]::after {
+  content: attr(data-tip);
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 11px);
+  transform: translate(-50%, 4px);
+  width: max-content;
+  max-width: 230px;
+  white-space: normal;
+  text-align: center;
+  font-size: 0.76rem;
+  line-height: 1.45;
+  font-weight: 400;
+  color: var(--text);
+  background: #15120d;
+  border: 1px solid var(--gold-line);
+  border-radius: 10px;
+  padding: 8px 12px;
+  box-shadow: var(--shadow);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s var(--ease), transform 0.2s var(--ease);
+  z-index: 60;
+}
+.chip[data-tip]::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 6px);
+  width: 9px;
+  height: 9px;
+  background: #15120d;
+  border-right: 1px solid var(--gold-line);
+  border-bottom: 1px solid var(--gold-line);
+  transform: translateX(-50%) rotate(45deg);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s var(--ease);
+  z-index: 61;
+}
+.chip[data-tip]:hover::after { opacity: 1; transform: translate(-50%, 0); }
+.chip[data-tip]:hover::before { opacity: 1; }
 
 /* ---------- Timeline ---------- */
 .timeline-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; }
