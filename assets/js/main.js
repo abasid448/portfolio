@@ -132,6 +132,23 @@
     counters.forEach((c) => (c.textContent = c.dataset.count + (c.dataset.suffix || "")));
   }
 
+  /* ---------- Skills tabs (click, and hover-preview on desktop) ---------- */
+  const stTabs = $$(".st-tab");
+  if (stTabs.length) {
+    const activate = (tab) => {
+      if (tab.classList.contains("is-active")) return;
+      stTabs.forEach((t) => t.classList.remove("is-active"));
+      $$(".st-panel").forEach((p) => p.classList.remove("is-active"));
+      tab.classList.add("is-active");
+      const panel = document.getElementById(tab.dataset.target);
+      if (panel) panel.classList.add("is-active");
+    };
+    stTabs.forEach((tab) => {
+      tab.addEventListener("click", () => activate(tab));
+      if (finePointer) tab.addEventListener("mouseenter", () => activate(tab));
+    });
+  }
+
   /* ---------- Typed role effect ---------- */
   const typedEl = $("[data-typed]");
   if (typedEl && !prefersReduced) {
@@ -260,7 +277,7 @@
       requestAnimationFrame(loop);
     }
 
-    const hoverSel = "a, button, input, textarea, .tilt, .chip, .hero-socials a, .footer-socials a";
+    const hoverSel = "a, button, input, textarea, .tilt, .skill-tag, .hero-socials a, .footer-socials a";
     document.addEventListener("mouseover", (e) => {
       if (e.target.closest(hoverSel)) ring.classList.add("is-hover");
     });

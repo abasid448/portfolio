@@ -49,6 +49,14 @@
     <symbol id="i-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></symbol>
     <symbol id="i-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7,10 12,15 17,10"/><line x1="12" y1="15" x2="12" y2="3"/></symbol>
     <symbol id="i-external" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15,3 21,3 21,9"/><line x1="10" y1="14" x2="21" y2="3"/></symbol>
+    <symbol id="i-mobile" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="2"/><line x1="11" y1="18" x2="13" y2="18"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></symbol>
+    <symbol id="i-server" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></symbol>
+    <symbol id="i-database" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></symbol>
+    <symbol id="i-link" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></symbol>
+    <symbol id="i-briefcase" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></symbol>
+    <symbol id="i-cap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1 2.5 2.5 6 2.5s6-1.5 6-2.5v-5"/></symbol>
   </svg>
 
   <div id="scroll-progress"></div>
@@ -205,80 +213,91 @@
           <h2 class="section-title reveal" data-delay="1">Skills &amp; toolbox</h2>
           <p class="reveal" data-delay="2">A full-stack skill set centred on native Android, extending into web and backend.</p>
         </div>
-        <div class="skills-grid">
-          <div class="skill-card reveal">
-            <div class="sc-head"><span class="sc-icon">🤖</span><h3>Android (Native)</h3></div>
-            <div class="chips">
-              <span class="chip" data-tip="Modern, concise JVM language — my primary language for Android.">Kotlin</span>
-              <span class="chip" data-tip="Declarative UI toolkit for building native Android interfaces.">Jetpack Compose</span>
-              <span class="chip" data-tip="Google's latest Material Design system for consistent UI.">Material 3</span>
-              <span class="chip" data-tip="Compile-time dependency injection built on Dagger.">Hilt (DI)</span>
-              <span class="chip" data-tip="Kotlin's async concurrency and reactive data streams.">Coroutines &amp; Flow</span>
-              <span class="chip" data-tip="On-device SQLite persistence with compile-time query checks.">Room</span>
-              <span class="chip" data-tip="Typed, modern local storage — replaces SharedPreferences.">DataStore</span>
-              <span class="chip" data-tip="Type-safe in-app navigation between Compose screens.">Navigation Compose</span>
-              <span class="chip" data-tip="Fast, Kotlin-first image loading for Compose.">Coil</span>
-              <span class="chip" data-tip="Google Maps SDK integrated into Jetpack Compose.">Maps Compose</span>
-            </div>
+        <div class="skills-tabs reveal">
+          <div class="st-nav" role="tablist">
+            <button class="st-tab is-active" data-target="p-android"><span class="ic"><svg width="18" height="18"><use href="#i-mobile"/></svg></span><span class="tx">Android <b>Native</b></span><span class="ct">10</span></button>
+            <button class="st-tab" data-target="p-web"><span class="ic"><svg width="18" height="18"><use href="#i-globe"/></svg></span><span class="tx">Web <b>Frontend</b></span><span class="ct">8</span></button>
+            <button class="st-tab" data-target="p-backend"><span class="ic"><svg width="18" height="18"><use href="#i-server"/></svg></span><span class="tx">Backend <b>APIs</b></span><span class="ct">8</span></button>
+            <button class="st-tab" data-target="p-cross"><span class="ic"><svg width="18" height="18"><use href="#i-layers"/></svg></span><span class="tx">Cross-Platform</span><span class="ct">4</span></button>
+            <button class="st-tab" data-target="p-data"><span class="ic"><svg width="18" height="18"><use href="#i-database"/></svg></span><span class="tx">Databases <b>Cloud</b></span><span class="ct">7</span></button>
+            <button class="st-tab" data-target="p-concepts"><span class="ic"><svg width="18" height="18"><use href="#i-link"/></svg></span><span class="tx">Integrations <b>Concepts</b></span><span class="ct">8</span></button>
           </div>
-          <div class="skill-card reveal" data-delay="1">
-            <div class="sc-head"><span class="sc-icon">🌐</span><h3>Web &amp; Frontend</h3></div>
-            <div class="chips">
-              <span class="chip" data-tip="Component-based library for building web UIs.">React</span>
-              <span class="chip" data-tip="React framework with SSR, routing and the App Router.">Next.js (App Router)</span>
-              <span class="chip" data-tip="Typed superset of JavaScript for safer, scalable code.">TypeScript</span>
-              <span class="chip" data-tip="Utility-first CSS framework for rapid, consistent styling.">Tailwind CSS</span>
-              <span class="chip" data-tip="Accessible, composable React components built on Radix.">shadcn/ui</span>
-              <span class="chip" data-tip="Unstyled, accessible UI primitives for React.">Radix UI</span>
-              <span class="chip" data-tip="Production-ready animation library for React.">Framer Motion</span>
-              <span class="chip" data-tip="High-performance JavaScript animation library.">GSAP</span>
+
+          <div class="st-stage">
+            <div class="st-panel is-active" id="p-android">
+              <span class="st-index">01</span>
+              <div class="skill-tags">
+                <span class="skill-tag" data-tip="Modern, concise JVM language — my primary language for Android.">Kotlin</span>
+                <span class="skill-tag" data-tip="Declarative UI toolkit for building native Android interfaces.">Jetpack Compose</span>
+                <span class="skill-tag" data-tip="Google's latest Material Design system for consistent UI.">Material 3</span>
+                <span class="skill-tag" data-tip="Compile-time dependency injection built on Dagger.">Hilt (DI)</span>
+                <span class="skill-tag" data-tip="Kotlin's async concurrency and reactive data streams.">Coroutines &amp; Flow</span>
+                <span class="skill-tag" data-tip="On-device SQLite persistence with compile-time query checks.">Room</span>
+                <span class="skill-tag" data-tip="Typed, modern local storage — replaces SharedPreferences.">DataStore</span>
+                <span class="skill-tag" data-tip="Type-safe in-app navigation between Compose screens.">Navigation Compose</span>
+                <span class="skill-tag" data-tip="Fast, Kotlin-first image loading for Compose.">Coil</span>
+                <span class="skill-tag" data-tip="Google Maps SDK integrated into Jetpack Compose.">Maps Compose</span>
+              </div>
             </div>
-          </div>
-          <div class="skill-card reveal" data-delay="2">
-            <div class="sc-head"><span class="sc-icon">🛠️</span><h3>Backend &amp; APIs</h3></div>
-            <div class="chips">
-              <span class="chip" data-tip="JavaScript runtime for building server-side apps.">Node.js</span>
-              <span class="chip" data-tip="Minimal, fast web framework for Node.js.">Express</span>
-              <span class="chip" data-tip="GraphQL server &amp; client for typed, efficient APIs.">Apollo GraphQL</span>
-              <span class="chip" data-tip="Kotlin framework for async servers and clients.">Ktor</span>
-              <span class="chip" data-tip="Resource-based HTTP API architecture.">REST</span>
-              <span class="chip" data-tip="WebSocket protocol for real-time GraphQL subscriptions.">graphql-ws</span>
-              <span class="chip" data-tip="JSON Web Tokens for stateless authentication.">JWT</span>
-              <span class="chip" data-tip="Role-based access control for authorization.">RBAC</span>
+            <div class="st-panel" id="p-web">
+              <span class="st-index">02</span>
+              <div class="skill-tags">
+                <span class="skill-tag" data-tip="Component-based library for building web UIs.">React</span>
+                <span class="skill-tag" data-tip="React framework with SSR, routing and the App Router.">Next.js (App Router)</span>
+                <span class="skill-tag" data-tip="Typed superset of JavaScript for safer, scalable code.">TypeScript</span>
+                <span class="skill-tag" data-tip="Utility-first CSS framework for rapid, consistent styling.">Tailwind CSS</span>
+                <span class="skill-tag" data-tip="Accessible, composable React components built on Radix.">shadcn/ui</span>
+                <span class="skill-tag" data-tip="Unstyled, accessible UI primitives for React.">Radix UI</span>
+                <span class="skill-tag" data-tip="Production-ready animation library for React.">Framer Motion</span>
+                <span class="skill-tag" data-tip="High-performance JavaScript animation library.">GSAP</span>
+              </div>
             </div>
-          </div>
-          <div class="skill-card reveal" data-delay="1">
-            <div class="sc-head"><span class="sc-icon">📱</span><h3>Cross-Platform</h3></div>
-            <div class="chips">
-              <span class="chip" data-tip="Build native iOS &amp; Android apps with React.">React Native</span>
-              <span class="chip" data-tip="Toolchain &amp; runtime that speeds up React Native builds.">Expo</span>
-              <span class="chip" data-tip="Smooth, high-performance animations for React Native.">Reanimated</span>
-              <span class="chip" data-tip="GraphQL client with caching for apps.">Apollo Client</span>
+            <div class="st-panel" id="p-backend">
+              <span class="st-index">03</span>
+              <div class="skill-tags">
+                <span class="skill-tag" data-tip="JavaScript runtime for building server-side apps.">Node.js</span>
+                <span class="skill-tag" data-tip="Minimal, fast web framework for Node.js.">Express</span>
+                <span class="skill-tag" data-tip="GraphQL server &amp; client for typed, efficient APIs.">Apollo GraphQL</span>
+                <span class="skill-tag" data-tip="Kotlin framework for async servers and clients.">Ktor</span>
+                <span class="skill-tag" data-tip="Resource-based HTTP API architecture.">REST</span>
+                <span class="skill-tag" data-tip="WebSocket protocol for real-time GraphQL subscriptions.">graphql-ws</span>
+                <span class="skill-tag" data-tip="JSON Web Tokens for stateless authentication.">JWT</span>
+                <span class="skill-tag" data-tip="Role-based access control for authorization.">RBAC</span>
+              </div>
             </div>
-          </div>
-          <div class="skill-card reveal" data-delay="2">
-            <div class="sc-head"><span class="sc-icon">🗄️</span><h3>Databases &amp; Cloud</h3></div>
-            <div class="chips">
-              <span class="chip" data-tip="NoSQL document database for flexible data.">MongoDB</span>
-              <span class="chip" data-tip="Elegant object data modeling (ODM) for MongoDB.">Mongoose</span>
-              <span class="chip" data-tip="In-memory store for caching and real-time data.">Redis</span>
-              <span class="chip" data-tip="On-device SQLite database for Android.">Room</span>
-              <span class="chip" data-tip="Cloud object storage (S3) and NoSQL database (DynamoDB).">AWS (S3, DynamoDB)</span>
-              <span class="chip" data-tip="Google's backend platform — auth, messaging, analytics.">Firebase</span>
-              <span class="chip" data-tip="Real-time error monitoring and crash reporting.">Sentry</span>
+            <div class="st-panel" id="p-cross">
+              <span class="st-index">04</span>
+              <div class="skill-tags">
+                <span class="skill-tag" data-tip="Build native iOS &amp; Android apps with React.">React Native</span>
+                <span class="skill-tag" data-tip="Toolchain &amp; runtime that speeds up React Native builds.">Expo</span>
+                <span class="skill-tag" data-tip="Smooth, high-performance animations for React Native.">Reanimated</span>
+                <span class="skill-tag" data-tip="GraphQL client with caching for apps.">Apollo Client</span>
+              </div>
             </div>
-          </div>
-          <div class="skill-card reveal" data-delay="3">
-            <div class="sc-head"><span class="sc-icon">🔌</span><h3>Integrations &amp; Concepts</h3></div>
-            <div class="chips">
-              <span class="chip" data-tip="Payment gateway integration for India.">Razorpay</span>
-              <span class="chip" data-tip="Payments &amp; payouts gateway for India.">Cashfree</span>
-              <span class="chip" data-tip="Firebase Cloud Messaging for push notifications.">FCM Push</span>
-              <span class="chip" data-tip="APIs for SMS, voice and messaging.">Twilio</span>
-              <span class="chip" data-tip="Data structures &amp; algorithms — the problem-solving core.">DSA</span>
-              <span class="chip" data-tip="Five principles for maintainable object-oriented design.">SOLID</span>
-              <span class="chip" data-tip="Layered architecture that separates concerns cleanly.">Clean Architecture</span>
-              <span class="chip" data-tip="Model-View-ViewModel UI architecture pattern.">MVVM</span>
+            <div class="st-panel" id="p-data">
+              <span class="st-index">05</span>
+              <div class="skill-tags">
+                <span class="skill-tag" data-tip="NoSQL document database for flexible data.">MongoDB</span>
+                <span class="skill-tag" data-tip="Elegant object data modeling (ODM) for MongoDB.">Mongoose</span>
+                <span class="skill-tag" data-tip="In-memory store for caching and real-time data.">Redis</span>
+                <span class="skill-tag" data-tip="On-device SQLite database for Android.">Room</span>
+                <span class="skill-tag" data-tip="Cloud object storage (S3) and NoSQL database (DynamoDB).">AWS (S3, DynamoDB)</span>
+                <span class="skill-tag" data-tip="Google's backend platform — auth, messaging, analytics.">Firebase</span>
+                <span class="skill-tag" data-tip="Real-time error monitoring and crash reporting.">Sentry</span>
+              </div>
+            </div>
+            <div class="st-panel" id="p-concepts">
+              <span class="st-index">06</span>
+              <div class="skill-tags">
+                <span class="skill-tag" data-tip="Payment gateway integration for India.">Razorpay</span>
+                <span class="skill-tag" data-tip="Payments &amp; payouts gateway for India.">Cashfree</span>
+                <span class="skill-tag" data-tip="Firebase Cloud Messaging for push notifications.">FCM Push</span>
+                <span class="skill-tag" data-tip="APIs for SMS, voice and messaging.">Twilio</span>
+                <span class="skill-tag" data-tip="Data structures &amp; algorithms — the problem-solving core.">DSA</span>
+                <span class="skill-tag" data-tip="Five principles for maintainable object-oriented design.">SOLID</span>
+                <span class="skill-tag" data-tip="Layered architecture that separates concerns cleanly.">Clean Architecture</span>
+                <span class="skill-tag" data-tip="Model-View-ViewModel UI architecture pattern.">MVVM</span>
+              </div>
             </div>
           </div>
         </div>
@@ -294,7 +313,7 @@
         </div>
         <div class="timeline-cols">
           <div class="reveal">
-            <h3>💼 Experience</h3>
+            <h3><svg class="h-ico" width="20" height="20"><use href="#i-briefcase"/></svg> Experience</h3>
             <div class="timeline">
               <div class="tl-item">
                 <span class="when">Mar 2024 — Present</span>
@@ -319,7 +338,7 @@
           </div>
 
           <div class="reveal" data-delay="1">
-            <h3>🎓 Education</h3>
+            <h3><svg class="h-ico" width="20" height="20"><use href="#i-cap"/></svg> Education</h3>
             <div class="timeline">
               <div class="tl-item">
                 <span class="when">Jul 2019 — Jul 2022</span>
